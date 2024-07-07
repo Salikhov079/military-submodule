@@ -7,10 +7,10 @@ package commander;
 import "soldiers.proto";
 
 service CommanderService {
-    rpc Create(Commander) returns (Void);
-    rpc Update(Commander) returns (Void);
-    rpc Delete(ById) returns (Void);
-    rpc Get(ById) returns (Commander);
+    rpc Create(Commander) returns (soldiers.Void);
+    rpc Update(Commander) returns (soldiers.Void);
+    rpc Delete(soldiers.ById) returns (soldiers.Void);
+    rpc Get(soldiers.ById) returns (Commander);
     rpc GetAll(Void) returns (AllCommanders);
 }
 

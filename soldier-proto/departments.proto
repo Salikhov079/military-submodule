@@ -7,10 +7,10 @@ package department;
 import "soldiers.proto";
 
 service DepartmentService {
-    rpc Create(Department) returns (Void);
-    rpc Update(Department) returns (Void);
-    rpc Delete(ById) returns (Void);
-    rpc Get(ById) returns (Department);
+    rpc Create(Department) returns (soldiers.Void);
+    rpc Update(Department) returns (soldiers.Void);
+    rpc Delete(soldiers.ById) returns (soldiers.Void);
+    rpc Get(soldiers.ById) returns (Department);
     rpc GetAll(Department) returns (AllDepartments);
 }
 

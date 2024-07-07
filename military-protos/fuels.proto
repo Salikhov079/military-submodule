@@ -7,10 +7,10 @@ package fuel;
 import "techniques.proto";
 
 service FuelService {
-    rpc Create(FuelReq) returns (Fuel);
-    rpc Update(Fuel) returns (Fuel);
-    rpc Delete(ById) returns (Void);
-    rpc Get(ById) returns (Fuel);
+    rpc Create(FuelReq) returns (techniques.Void);
+    rpc Update(Fuel) returns (techniques.Void);
+    rpc Delete(techniques.ById) returns (techniques.Void);
+    rpc Get(techniques.ById) returns (Fuel);
     rpc GetAll(FuelReq) returns (Fuel);
 }
 

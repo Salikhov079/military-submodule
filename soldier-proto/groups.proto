@@ -7,10 +7,10 @@ package group;
 import "soldiers.proto";
 
 service GroupService {
-    rpc Create(GroupReq) returns (Void);
-    rpc Update(Group) returns (Void);
-    rpc Delete(ById) returns (Void);
-    rpc Get(ById) returns (Group);
+    rpc Create(GroupReq) returns (soldiers.Void);
+    rpc Update(Group) returns (soldiers.Void);
+    rpc Delete(soldiers.ById) returns (soldiers.Void);
+    rpc Get(soldiers.ById) returns (Group);
     rpc GetAll(GroupReq) returns (AllGroups);
 }
 

@@ -7,10 +7,10 @@ package bullet;
 import "techniques.proto";
 
 service BulletService {
-    rpc Create(BulletReq) returns (Void);
-    rpc Update(Bullet) returns (Void);
-    rpc Delete(ById) returns (Void);
-    rpc Get(ById) returns (Bullet);
+    rpc Create(BulletReq) returns (techniques.Void);
+    rpc Update(Bullet) returns (techniques.Void);
+    rpc Delete(techniques.ById) returns (techniques.Void);
+    rpc Get(techniques.ById) returns (Bullet);
     rpc GetAll(BulletReq) returns (AllBullets);
 }
 
