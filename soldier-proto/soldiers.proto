@@ -4,16 +4,17 @@ option go_package = "genprotos/soldiers";
 
 package soldiers;
 
+import "commanders.proto";
 import "groups.proto";
 
 service SoldierService {
-    rpc Create(SoldierReq) returns (Void);
-    rpc Update(Soldier) returns (Void);
-    rpc Delete(ById) returns (Void);
-    rpc Get(ById) returns (Soldier);
+    rpc Create(SoldierReq) returns (commanders.Void);
+    rpc Update(Soldier) returns (commanders.Void);
+    rpc Delete(commanders.ById) returns (commanders.Void);
+    rpc Get(commanders.ById) returns (Soldier);
     rpc GetAll(SoldierReq) returns (AllSoldiers);
-    rpc UseBullet(UseB) returns (Void);
-    rpc UseFuel(UseF) returns (Void);
+    rpc UseBullet(UseB) returns (commanders.Void);
+    rpc UseFuel(UseF) returns (commanders.Void);
 }
 
 message UseB {
