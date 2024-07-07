@@ -4,15 +4,19 @@ option go_package = "genprotos/soldiers";
 
 package commander;
 
-import "soldiers.proto";
-
 service CommanderService {
-    rpc Create(CommanderReq) returns (soldiers.Void);
-    rpc Update(Commander) returns (soldiers.Void);
-    rpc Delete(soldiers.ById) returns (soldiers.Void);
-    rpc Get(soldiers.ById) returns (Commander);
+    rpc Create(CommanderReq) returns (Void);
+    rpc Update(Commander) returns (Void);
+    rpc Delete(ById) returns (Void);
+    rpc Get(ById) returns (Commander);
     rpc GetAll(CommanderReq) returns (AllCommanders);
 }
+
+message ById {
+    string id = 1;
+}
+
+message Void {}
 
 message CommanderReq {
     string name = 2;

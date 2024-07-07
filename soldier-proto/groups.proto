@@ -4,13 +4,14 @@ option go_package = "genprotos/soldiers";
 
 package group;
 
-import "soldiers.proto";
+import "departments.proto";
+import "commanders.proto";
 
 service GroupService {
-    rpc Create(GroupReq) returns (soldiers.Void);
-    rpc Update(Group) returns (soldiers.Void);
-    rpc Delete(soldiers.ById) returns (soldiers.Void);
-    rpc Get(soldiers.ById) returns (Group);
+    rpc Create(GroupReq) returns (commanders.Void);
+    rpc Update(Group) returns (commanders.Void);
+    rpc Delete(commanders.ById) returns (commanders.Void);
+    rpc Get(commanders.ById) returns (Group);
     rpc GetAll(GroupReq) returns (AllGroups);
 }
 
@@ -23,8 +24,8 @@ message GroupReq {
 message Group {
     string id = 1;
     string name = 2;
-    string department_id = 3;
-    string commanders_id = 4;
+    Department department = 3;
+    Commander commanders = 4;
 }
 
 message AllGroups {

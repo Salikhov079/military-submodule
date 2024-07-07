@@ -4,6 +4,8 @@ option go_package = "genprotos/soldiers";
 
 package soldiers;
 
+import "groups.proto";
+
 service SoldierService {
     rpc Create(SoldierReq) returns (Void);
     rpc Update(Soldier) returns (Void);
@@ -28,12 +30,6 @@ message UseF {
     string date = 4;
 }
 
-message ById {
-    string id = 1;
-}
-
-message Void {}
-
 message SoldierReq {
     string name = 1;
     string email = 2;
@@ -49,7 +45,7 @@ message Soldier {
     string email = 3;
     string date_of_birth = 4;
     string phone_number = 5;
-    string group_id = 6;
+    groups.Group group = 6;
     string join_date = 7;
 }
 
