@@ -1,0 +1,27 @@
+syntax = "proto3";
+
+option go_package = "genprotos/soldier";
+
+package commander;
+
+import "soldiers.proto";
+
+service CommanderService {
+    rpc Create(Commander) returns (Void);
+    rpc Update(Commander) returns (Void);
+    rpc Delete(ById) returns (Void);
+    rpc Get(ById) returns (Commander);
+    rpc GetAll(Void) returns (AllCommanders);
+}
+
+message Commander {
+    string id = 1;
+    string name = 2;
+    string email = 3;
+    string date_of_birth = 4;
+    string phone_number = 5;
+    string position = 6;
+}
+message AllCommanders {
+    repeated Commander commanders = 1;
+}

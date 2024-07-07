@@ -1,0 +1,59 @@
+syntax = "proto3";
+
+option go_package = "genprotos/soldier";
+
+package soldier;
+
+service SoldierService {
+    rpc Create(SoldierReq) returns (Void);
+    rpc Update(Soldier) returns (Void);
+    rpc Delete(ById) returns (Void);
+    rpc Get(ById) returns (Soldier);
+    rpc GetAll(SoldierReq) returns (AllSoldiers);
+    rpc UseBullet(UseB) returns (Void);
+    rpc UseFuel(UseF) returns (Void);
+}
+
+message UseB {
+    int32 quantity_weapon = 1;
+    int32 quantity_big_weapon = 2;
+    string soldier_id = 3;
+    string date = 4;
+}
+
+message UseF {
+    int32 diesel = 1;
+    int32 petrol = 2;
+    string soldier_id = 3;
+    string date = 4;
+}
+
+message ById {
+    string id = 1;
+}
+
+message Void {}
+
+message SoldierReq {
+    string name = 1;
+    string email = 2;
+    string date_of_birth = 3;
+    string phone_number = 4;
+    string group_id = 5;
+    string join_date = 6;
+}
+
+message Soldier {
+    string id = 1;
+    string name = 2;
+    string email = 3;
+    string date_of_birth = 4;
+    string phone_number = 5;
+    string group_id = 6;
+    string join_date = 7;
+}
+
+message AllSoldiers {
+    repeated Soldier soldiers = 1;
+}
+

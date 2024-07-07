@@ -1,0 +1,24 @@
+syntax = "proto3";
+
+option go_package = "genprotos/soldier";
+
+package department;
+
+import "soldiers.proto";
+
+service DepartmentService {
+    rpc Create(Department) returns (Void);
+    rpc Update(Department) returns (Void);
+    rpc Delete(ById) returns (Void);
+    rpc Get(ById) returns (Department);
+    rpc GetAll(Department) returns (AllDepartments);
+}
+
+message Department {
+    string id = 1;
+    string name = 2;
+}
+
+message AllDepartments {
+    repeated Department departments = 1;
+}
