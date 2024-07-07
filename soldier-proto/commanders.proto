@@ -7,11 +7,19 @@ package commander;
 import "soldiers.proto";
 
 service CommanderService {
-    rpc Create(Commander) returns (soldiers.Void);
+    rpc Create(CommanderReq) returns (soldiers.Void);
     rpc Update(Commander) returns (soldiers.Void);
     rpc Delete(soldiers.ById) returns (soldiers.Void);
     rpc Get(soldiers.ById) returns (Commander);
-    rpc GetAll(Void) returns (AllCommanders);
+    rpc GetAll(CommanderReq) returns (AllCommanders);
+}
+
+message CommanderReq {
+    string name = 2;
+    string email = 3;
+    string date_of_birth = 4;
+    string phone_number = 5;
+    string position = 6;
 }
 
 message Commander {
@@ -22,6 +30,7 @@ message Commander {
     string phone_number = 5;
     string position = 6;
 }
+
 message AllCommanders {
     repeated Commander commanders = 1;
 }
