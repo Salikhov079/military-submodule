@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-option go_package = "genprotos/soldier";
+option go_package = "genprotos/soldiers";
 
 package soldier;
 

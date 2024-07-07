@@ -1,16 +1,16 @@
 syntax = "proto3";
 
-option go_package = "genprotos/soldier";
+option go_package = "genprotos/soldiers";
 
 package department;
 
-import "soldier.proto";
+import "soldiers.proto";
 
 service DepartmentService {
-    rpc Create(Department) returns (soldier.Void);
-    rpc Update(Department) returns (soldier.Void);
-    rpc Delete(soldier.ById) returns (soldier.Void);
-    rpc Get(soldier.ById) returns (Department);
+    rpc Create(Department) returns (soldiers.Void);
+    rpc Update(Department) returns (soldiers.Void);
+    rpc Delete(soldiers.ById) returns (soldiers.Void);
+    rpc Get(soldiers.ById) returns (Department);
     rpc GetAll(Department) returns (AllDepartments);
 }
 

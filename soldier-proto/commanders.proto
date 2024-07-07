@@ -1,16 +1,16 @@
 syntax = "proto3";
 
-option go_package = "genprotos/soldier";
+option go_package = "genprotos/soldiers";
 
 package commander;
 
-import "soldier.proto";
+import "soldiers.proto";
 
 service CommanderService {
-    rpc Create(CommanderReq) returns (soldier.Void);
-    rpc Update(Commander) returns (soldier.Void);
-    rpc Delete(soldier.ById) returns (soldier.Void);
-    rpc Get(soldier.ById) returns (Commander);
+    rpc Create(CommanderReq) returns (soldiers.Void);
+    rpc Update(Commander) returns (soldiers.Void);
+    rpc Delete(soldiers.ById) returns (soldiers.Void);
+    rpc Get(soldiers.ById) returns (Commander);
     rpc GetAll(CommanderReq) returns (AllCommanders);
 }
 

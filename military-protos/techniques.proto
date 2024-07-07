@@ -1,8 +1,8 @@
 syntax = "proto3";
 
-option go_package = "genprotos/military";
+option go_package = "genprotos/militaries";
 
-package technique;
+package techniques;
 
 service TechniqueService {
     rpc Create(TechniqueReq) returns (Void);
