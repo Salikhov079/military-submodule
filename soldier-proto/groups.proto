@@ -24,7 +24,7 @@ message GroupReq {
 message Group {
     string id = 1;
     string name = 2;
-    commanders.Department department = 3;
+    departments.Department department = 3;
     commanders.Commander commanders = 4;
 }
 
