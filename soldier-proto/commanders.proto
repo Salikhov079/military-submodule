@@ -2,7 +2,7 @@ syntax = "proto3";
 
 option go_package = "genprotos/soldiers";
 
-package commander;
+package commanders;
 
 service CommanderService {
     rpc Create(CommanderReq) returns (Void);

@@ -2,7 +2,7 @@ syntax = "proto3";
 
 option go_package = "genprotos/soldiers";
 
-package group;
+package groups;
 
 import "departments.proto";
 import "commanders.proto";
