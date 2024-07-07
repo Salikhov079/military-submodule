@@ -2,13 +2,13 @@ syntax = "proto3";
 
 option go_package = "genprotos/military";
 
-package techniques;
+package technique;
 
 service TechniqueService {
-    rpc Create(TechniqueReq) returns (techniques.Void);
-    rpc Update(Technique) returns (techniques.Void);
-    rpc Delete(techniques.ById) returns (techniques.Void);
-    rpc Get(techniques.ById) returns (Technique);
+    rpc Create(TechniqueReq) returns (Void);
+    rpc Update(Technique) returns (Void);
+    rpc Delete(ById) returns (Void);
+    rpc Get(ById) returns (Technique);
     rpc GetAll(TechniqueReq) returns (AllTechnique);
 }
 
