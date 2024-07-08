@@ -16,6 +16,20 @@ service SoldierService {
     rpc UseBullet(UseB) returns (commanders.Void);
     rpc UseFuel(UseF) returns (commanders.Void);
 }
+message GetAllSoldierFilter{
+    string name =1;
+    string email=2;
+    string age =3;
+}
+message CreateSoldier {
+    string name = 2;
+     string email = 3;
+    string date_of_birth = 4;
+    string phone_number = 5;
+    groups.Group group = 6;
+    string join_date = 7;
+    string end_date = 8;
+}
 
 message UseB {
     int32 quantity_weapon = 1;

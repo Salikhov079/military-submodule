@@ -14,6 +14,18 @@ service DepartmentService {
     rpc GetAll(Department) returns (AllDepartments);
 }
 
+message CreateDeportment{
+    string commanders_id = 1;
+    string name = 2;
+}
+message UpdateDeportment{
+    string id =1;
+    string commanders_id = 2;
+    string name = 3;
+}
+message GetAllDepartmentFilter{
+    string name =1;
+}
 message Department {
     string id = 1;
     string name = 2;

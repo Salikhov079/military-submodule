@@ -15,6 +15,7 @@ service GroupService {
     rpc GetAll(GroupReq) returns (AllGroups);
 }
 
+
 message GroupReq {
     string name = 1;
     string department_id = 2;
