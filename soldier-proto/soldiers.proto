@@ -38,6 +38,7 @@ message SoldierReq {
     string phone_number = 4;
     string group_id = 5;
     string join_date = 6;
+    string end_date = 7;
 }
 
 message Soldier {
@@ -48,6 +49,7 @@ message Soldier {
     string phone_number = 5;
     groups.Group group = 6;
     string join_date = 7;
+    string end_date = 8;
 }
 
 message AllSoldiers {
