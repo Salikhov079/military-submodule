@@ -18,7 +18,6 @@ service GroupService {
 message GroupReq {
     string name = 1;
     string department_id = 2;
-    string commanders_id = 3;
 }
 
 message Group {
