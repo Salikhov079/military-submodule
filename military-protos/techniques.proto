@@ -38,6 +38,6 @@ message AllTechnique {
 }
 
 message TechniqueAddSub {
-    string id = 1;
+    string name = 1;
     int32 quantity = 2;
 }
