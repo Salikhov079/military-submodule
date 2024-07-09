@@ -16,7 +16,7 @@ service SoldierService {
     rpc UseBullet(UseB) returns (commanders.Void);
     rpc UseFuel(UseF) returns (commanders.Void);
     rpc StatistikWeapons(GetSoldierStatistik) returns (GetSoldierStatistikRes);
-    rpc FuelStatistik(GetSoldierStatistikFuelRes) returns(GetSoldierStatistikFuelRes);
+    rpc FuelStatistik(GetSoldierStatistikFuel) returns(GetSoldierStatistikFuelRes);
 }
 message GetAllSoldierFilter{
     string name =1;
