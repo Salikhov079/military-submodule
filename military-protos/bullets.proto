@@ -12,8 +12,8 @@ service BulletService {
     rpc Delete(techniques.ById) returns (techniques.Void);
     rpc Get(techniques.ById) returns (Bullet);
     rpc GetAll(BulletReq) returns (AllBullets);
-    rpc Add(BulletAddSub) returns (Void);
-    rpc Sub(BulletAddSub) returns (Void);
+    rpc Add(BulletAddSub) returns (techniques.Void);
+    rpc Sub(BulletAddSub) returns (techniques.Void);
 }
 
 message BulletReq {
