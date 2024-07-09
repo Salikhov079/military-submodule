@@ -10,6 +10,8 @@ service TechniqueService {
     rpc Delete(ById) returns (Void);
     rpc Get(ById) returns (Technique);
     rpc GetAll(TechniqueReq) returns (AllTechnique);
+    rpc Add(TechniqueAddSub) returns (Void);
+    rpc Sub(TechniqueAddSub) returns (Void);
 }
 
 message ById {
@@ -33,4 +35,8 @@ message Technique {
 
 message AllTechnique {
     repeated Technique techniques = 1;
+}
+
+message TechniqueAddSub {
+    int32 quantity = 1;
 }
